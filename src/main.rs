@@ -1,12 +1,13 @@
-use ferris_says::say; // from the previous step
-use std::io::{stdout, BufWriter};
+fn greet_world() {
+    let southern_germany = "Grüß Gott!";
+    let chinese = "世界，你好";
+    let english = "World, hello";
+    let regions = [southern_germany, chinese, english];
+    for region in regions.iter() {
+        println!("{}", &region);
+    }
+}
 
 fn main() {
-    let stdout = stdout();
-    let message = String::from("Hello fellow Rustaceans!");
-    let width = message.chars().count();
-
-    let mut writer = BufWriter::new(stdout.lock());
-    say(message.as_bytes(), width, &mut writer).unwrap();
+    greet_world();
 }
-    
