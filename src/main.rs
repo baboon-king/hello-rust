@@ -1,13 +1,12 @@
-fn greet_world() {
-    let southern_germany = "Grüß Gott!";
-    let chinese = "世界，你好";
-    let english = "World, hello";
-    let regions = [southern_germany, chinese, english];
-    for region in regions.iter() {
-        println!("{}", &region);
-    }
+fn main() {
+    let a = 10;
+    let b: i32 = 20;
+    let c = 30i32;
+    let d = 30_i32;
+    let e = add(add(a, b), add(c, d));
+    println!("( a + b ) + ( c + d ) = {}", e)
 }
 
-fn main() {
-    greet_world();
+fn add(i: i32, j: i32) -> i32 {
+    i + j
 }
